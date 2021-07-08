@@ -7,7 +7,6 @@ namespace GenericLoggingSystem
     public class SeverityLog : Log
     {
         public static int SourceMaxLength = 12;
-
         public string Source;
         public string Message;
         public Severity Severity = Severity.Info;
@@ -34,8 +33,6 @@ namespace GenericLoggingSystem
         {
             return $"[{LogStream.TruncateString(Severity.ToString().ToUpper(), 8).PadRight(8)}] {GetTimeString()} {(Source.Length <= SourceMaxLength ? Source.PadRight(SourceMaxLength, ' ') : Source.Substring(0, SourceMaxLength))} {Message} {Exception}";
         }
-
-
     }
 
     /// <summary>

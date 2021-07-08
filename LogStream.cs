@@ -34,7 +34,7 @@ namespace GenericLoggingSystem
         /// Log files will appear in <code>{ExecutableDirectory}/Logs/</code><br/>
         /// You can use the <see cref="LogStream.Initialize(string, bool)" /> if you want a custom LogDirectory.
         /// </remarks>
-        public static void Initialize() => Initialize(AppDomain.CurrentDomain.BaseDirectory + "\\Logs");
+        public static void Initialize() => Initialize(AppDomain.CurrentDomain.BaseDirectory + "/Logs");
 
 
         /// <summary>
